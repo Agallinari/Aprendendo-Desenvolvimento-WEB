@@ -1,0 +1,361 @@
+Revisão Básica de HTML
+Noções básicas de HTML
+
+    Função do HTML: HTML representa o conteúdo e a estrutura da página web.
+    Elementos HTML: Elementos são os blocos de construção de um documento HTML. Eles representam títulos, parágrafos, links, imagens e mais. A maioria dos elementos HTML consiste em uma tag de abertura (<elementName>) e uma tag de fechamento (</elementName>).
+
+Aqui está a sintaxe básica:
+
+<elementName>Content goes here</elementName>
+
+    Elementos Void: Elementos void não podem ter nenhum conteúdo e possuem apenas uma tag de início. Exemplos incluem os elementos img e meta.
+
+<img>
+<meta>
+
+É comum ver algumas bases de código que incluem uma barra / dentro do elemento void.Ambos são aceitáveis:
+
+<img>
+<img/>
+
+    Atributos: Um atributo é um valor colocado dentro da tag de abertura de um elemento HTML. Os atributos fornecem informações adicionais sobre o elemento ou especificam como o elemento deve se comportar. Aqui está a sintaxe básica para um atributo:
+
+<element attribute="value"></element>
+
+Um atributo booleano é um atributo que pode estar presente ou ausente em uma tag HTML.Se presente, o valor é true caso contrário é false.Exemplos de atributos booleanos incluem disabled, readonly e required.
+
+    Comentários: Comentários são usados em programação para deixar anotações para você e outros desenvolvedores no seu código. Aqui está a sintaxe para um comentário em HTML:
+
+<!--This is an HTML comment.-->
+
+Elementos HTML comuns
+
+    Elementos de Cabeçalho: Existem seis elementos de cabeçalho em HTML. Os elementos de cabeçalho h1 a h6 são usados para indicar a importância do conteúdo abaixo deles. Quanto menor o número, maior a importância, então os elementos h2 têm menos importância que os elementos h1.
+
+<h1>most important heading element</h1>
+<h2>second most important heading element</h2>
+<h3>third most important heading element</h3>
+<h4>fourth most important heading element</h4>
+<h5>fifth most important heading element</h5>
+<h6>least important heading element</h6>
+
+    Elementos de Parágrafo: Isso é usado para parágrafos em uma página web.
+
+<p>This is a paragraph element.</p>
+
+    Elementos img: O elemento img é usado para adicionar imagens à página web. O atributo src é usado para especificar a localização dessa imagem. Para elementos de imagem, é uma boa prática incluir outro atributo chamado atributo alt. Aqui está um exemplo de um elemento img com os atributos src e alt:
+
+<img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+
+    Elemento body: Este elemento é usado para representar o conteúdo do documento HTML.
+
+<body>
+  <h1>CatPhotoApp</h1>
+  <p>This is a paragraph element.</p>
+</body>    
+
+    Elementos section: Este elemento é usado para dividir o conteúdo em seções menores.
+
+<section>
+  <h2>About Me</h2>
+  <p>Hi, I am Jane Doe and I am a web developer.</p>
+</section>
+
+    Elementos div: Este elemento é um elemento HTML genérico que não possui nenhum significado semântico. Ele é usado como um contêiner genérico para conter outros elementos HTML.
+
+<div>
+  <h1>I am a heading</h1>
+  <p>I am a paragraph</p>
+</div>
+
+    Elementos Anchor (a): Esses elementos são usados para aplicar links a uma página web. O atributo href é usado para especificar para onde o link deve ir quando o usuário clicar nele.
+
+<a href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg">cute cats</a>
+
+    Elementos de Lista Não Ordenada (ul) e Ordenada (ol): Para criar uma lista com marcadores de itens você deve usar o elemento ul com um ou mais elementos li aninhados dentro assim:
+
+<ul>
+  <li>catnip</li>
+  <li>laser pointers</li>
+  <li>lasagna</li>
+</ul>
+
+Para criar uma lista ordenada de itens você deve usar o elemento ol:
+
+<ol>
+  <li>flea treatment</li>
+  <li>thunder</li>
+  <li>other cats</li>
+</ol>
+
+    Elemento de Ênfase (em): Isso é usado para colocar ênfase em um trecho de texto.
+
+<p>Cats <em>love</em> lasagna.</p>  
+
+    Elemento de Importância Forte (strong): Este elemento é usado para colocar forte ênfase no texto para indicar um senso de urgência e seriedade.
+
+<p>
+  <strong>Important:</strong> Before proceeding, make sure to wear your safety goggles. 
+</p>
+
+    Elementos figure e figcaption: O elemento figure é usado para agrupar conteúdo como imagens e diagramas. O elemento figcaption é usado para representar uma legenda para esse conteúdo dentro do elemento figure.
+
+<figure>
+  <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Two tabby kittens sleeping together on a couch.">
+  <figcaption>Cats <strong>hate</strong> other cats.</figcaption>  
+</figure>
+
+    Elemento main: Este elemento é usado para representar o conteúdo principal de uma página web.
+    Elemento footer: Este elemento é colocado na parte inferior do documento HTML e geralmente contém informações de direitos autorais e outros links importantes da página.
+
+<footer>
+  <p>
+    No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a>
+  </p>
+</footer>
+
+Identificadores e Agrupamento
+
+    IDs: Identificadores únicos de elementos para elementos HTML. Os nomes de ID devem ser usados apenas uma vez por documento HTML.
+
+<h1 id="title">Movie Review Page</h1>
+
+Nomes de ID não podem conter espaços.Se o nome do seu ID contiver várias palavras, você pode usar hífens entre as palavras assim:
+
+<div id="red-box"></div>
+
+    Classes: Classes são usadas para agrupar elementos para estilização e comportamento.
+
+<div class="box"></div>
+
+Ao contrário dos IDs, você pode reutilizar o mesmo nome de classe em todo o documento HTML.O valor de class também pode ter espaços assim:
+
+<div class="box red-box"></div>
+<div class="box blue-box"></div>
+
+Caracteres Especiais e Vinculação
+
+    Entidades HTML: Uma entidade HTML, ou referência de caractere, é um conjunto de caracteres usados para representar um caractere reservado em HTML. Exemplos incluem o símbolo e comercial (&amp;) e o símbolo de menor que (&lt;).
+
+<p>This is an &lt;img /&gt; element</p>
+
+    Elemento link: Este elemento é usado para vincular a recursos externos como folhas de estilo e ícones do site. Aqui está a sintaxe básica para usar o elemento link para um arquivo CSS externo:
+
+<link rel="stylesheet" href="./styles.css" />
+
+O atributo rel é usado para especificar a relação entre o recurso vinculado e o documento HTML.O atributo href é usado para especificar a localização da URL para o recurso externo.
+
+    Elemento script: Este elemento é usado para incorporar código executável.
+
+<body>
+  <script>
+    alert("Welcome to freeCodeCamp");
+  </script>
+</body>
+
+Embora você possa tecnicamente escrever todo o seu código JavaScript dentro das tags script, é considerado uma boa prática vincular a um arquivo JavaScript externo.Aqui está um exemplo de uso do elemento script para vincular a um arquivo JavaScript externo:
+
+<script src="path-to-javascript-file.js"></script>
+
+O atributo src é usado aqui para especificar a localização desse arquivo JavaScript externo.
+Boilerplate e Codificação
+
+    HTML boilerplate: Este é um boilerplate que inclui a estrutura básica e os elementos essenciais que todo documento HTML precisa.
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>freeCodeCamp</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!--Headings, paragraphs, images, etc. go inside here-->
+  </body>
+</html>
+
+    DOCTYPE: Isso é usado para informar aos navegadores qual versão do HTML você está usando.
+    Elemento html: Este representa o elemento de nível superior ou a raiz de um documento HTML. Para especificar o idioma do documento, você deve usar o atributo lang.
+    Elemento head: A seção head contém metadados importantes que são informações nos bastidores necessárias para navegadores e motores de busca.
+    Elementos meta: Esses elementos representam os metadados do seu site. Esses elementos contêm detalhes sobre coisas como codificação de caracteres e como sites como o Twitter devem pré-visualizar o link da sua página e mais.
+    Elemento title: Este elemento é usado para definir o texto que aparece na aba ou janela do navegador.
+    Codificação de caracteres UTF-8: UTF-8, ou UCS Transformation Format 8, é uma codificação de caracteres padronizada amplamente usada na web. Codificação de caracteres é o método que os computadores usam para armazenar caracteres como dados. O atributo charset é usado dentro de um elemento meta para definir a codificação de caracteres para UTF-8.
+
+SEO e Compartilhamento Social
+
+    SEO: Otimização para Motores de Busca é uma prática que otimiza páginas web para que elas se tornem mais visíveis e tenham melhor posicionamento nos motores de busca.
+    Elemento Meta (description): Isso é usado para fornecer uma descrição curta para a página web e impactar o SEO.
+
+<meta
+  name="description"
+  content="Discover expert tips and techniques for gardening in small spaces, choosing the right plants, and maintaining a thriving garden."
+/>
+
+    Tags Open Graph: O protocolo open graph permite que você controle como o conteúdo do seu site aparece em várias plataformas de mídia social, como Facebook, LinkedIn e muitas outras.
+
+Ao definir essas propriedades open graph, você pode atrair os usuários para que queiram clicar e interagir com seu conteúdo.
+Você pode definir essas propriedades por meio de uma coleção de elementos meta dentro da seção head do seu HTML.
+
+    Propriedade og:title: Isso é usado para definir o título que aparece nas postagens de redes sociais.
+
+<meta content="freeCodeCamp.org" property="og:title" />
+
+    Propriedade og:type: A propriedade type é usada para representar o tipo de conteúdo que está sendo compartilhado nas redes sociais. Exemplos desse conteúdo incluem artigos, sites, vídeos ou músicas.
+
+<meta property="og:type" content="website" />
+
+    Propriedade og:image: Isso é usado para definir a imagem exibida em postagens de redes sociais.
+
+<meta
+  content="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
+  property="og:image"
+/>
+
+    Propriedade og:url: Isso é usado para definir a URL na qual os usuários clicarão nas postagens de mídia social.
+
+<meta property="og:url" content="https://www.freecodecamp.org" />
+
+Elementos de Mídia e Otimização
+
+    Elementos substituídos: Um elemento substituído é um elemento cujo conteúdo é determinado por um recurso externo em vez do próprio CSS. Um exemplo seria um elemento iframe. iframe significa inline frame. É um elemento inline usado para incorporar outro conteúdo HTML diretamente dentro da página HTML.
+
+<iframe src="https://www.example.com" title="Example Site"></iframe>
+
+Você pode incluir o atributo allowfullscreen que permite ao usuário exibir o iframe em modo de tela cheia.
+
+<iframe
+  src="video-url"
+  width="width-value"
+  height="height-value"
+  allowfullscreen
+></iframe>
+
+Para incorporar um vídeo dentro de um iframe você pode copiá-lo diretamente de serviços populares de vídeo como YouTube e Vimeo ou defini-lo você mesmo com o atributo src apontando para a URL desse vídeo.Aqui está um exemplo de como incorporar um curso popular do freeCodeCamp do YouTube:
+
+<h1>A freeCodeCamp YouTube Video Embedded with the iframe Element</h1>
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/PkZNo7MFNFg?si=-UBVIUNM3csdeiWF"
+  title="YouTube video player"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+
+Existem alguns outros elementos substituídos, como video e embed.E alguns elementos se comportam como elementos substituídos em circunstâncias específicas.Aqui está um exemplo de um elemento input com o atributo type definido como image:
+
+<input type="image" alt="Descriptive text goes here" src="example-img-url">
+
+    Otimização de mídia: Existem três ferramentas a considerar ao usar mídia, como imagens, em suas páginas web: o tamanho, o formato e a compressão. Um algoritmo de compressão é usado para reduzir o tamanho de arquivos ou dados.
+    Formatos de imagem: Dois dos formatos de arquivo mais comuns são PNG e JPG, mas estes não são mais os formatos mais ideais para servir imagens. A menos que você precise de suporte para navegadores mais antigos, você deve considerar usar um formato mais otimizado, como WEBP ou AVIF.
+    Licenças de imagem: Uma imagem em domínio público não possui direitos autorais vinculados a ela e pode ser usada livremente sem quaisquer restrições. Imagens licenciadas especificamente sob a licença Creative Commons 0 são consideradas domínio público. Algumas imagens podem ser liberadas sob uma licença permissiva, como uma licença Creative Commons ou a licença BSD que o freeCodeCamp usa.
+    SVGs: Gráficos Vetoriais Escaláveis rastreiam dados baseados em caminhos e equações para traçar pontos, linhas e curvas. O que isso realmente significa é que um gráfico vetorial, como um SVG, pode ser escalado para qualquer tamanho sem impactar a qualidade.
+
+Integração Multimídia
+
+    Elementos audio e video: Os elementos audio e video permitem que você adicione conteúdo de som e vídeo aos seus documentos HTML. O elemento audio suporta formatos de áudio populares como mp3, wav e ogg. O elemento video suporta formatos mp4, ogg e webm.
+
+<audio src="CrystalizeThatInnerChild.mp3"></audio>
+
+Se você quiser ver o player de áudio na página, então você pode adicionar o elemento audio com o atributo controls:
+
+<audio src="CrystalizeThatInnerChild.mp3" controls></audio>
+
+O atributo controls permite que os usuários controlem a reprodução de áudio, incluindo ajustar o volume e pausar ou retomar a reprodução.O atributo controls é um atributo booleano que pode ser adicionado a um elemento para habilitar os controles de reprodução embutidos.Se omitido, nenhum controle será exibido.
+
+    Atributo loop: O atributo loop é um atributo booleano que faz o áudio ser reproduzido continuamente.
+
+<audio
+  src="https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3"
+  loop
+  controls
+></audio>
+
+    Atributo muted: Quando presente no elemento audio, o atributo booleano muted iniciará o áudio em estado mudo.
+
+<audio
+  src="https://cdn.freecodecamp.org/curriculum/js-music-player/can't-stay-down.mp3"
+  loop
+  controls
+  muted
+></audio>
+
+    Elemento source: Quando se trata de tipos de arquivos de áudio, existem diferenças em quais navegadores suportam quais tipos. Para acomodar isso, você pode usar elementos source dentro do elemento audio e o navegador selecionará a primeira fonte que ele entender. Aqui está um exemplo de uso de múltiplos elementos source para um elemento audio:
+
+<audio controls>
+  <source src="audio.ogg" type="audio/ogg" />
+  <source src="audio.wav" type="audio/wav" />
+  <source src="audio.mp3" type="audio/mpeg" />
+</audio>
+
+Todos os atributos que aprendemos até agora também são suportados no elemento video.Aqui está um exemplo de uso de um elemento video com os atributos loop, controls e muted:
+
+<video
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  loop
+  controls
+  muted
+></video>
+
+    Atributo poster: Se você quiser exibir uma imagem enquanto o vídeo está sendo baixado, pode usar o atributo poster. Este atributo não está disponível para elementos audio e é exclusivo do elemento video.
+
+<video
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  loop
+  controls
+  muted
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+  width="620"
+></video>
+
+Tipos de atributo Target
+
+    Atributo target: Este atributo informa ao navegador onde abrir a URL para o elemento anchor. Existem quatro valores importantes possíveis para este atributo: _self, _blank, _parent e _top. Há um quinto valor, chamado _unfencedTop, que atualmente é usado para a API experimental FencedFrame. Provavelmente você ainda não terá motivo para usar este.
+    Valor _self: Este é o valor padrão para o atributo target. Isso abre o link no contexto de navegação atual. Na maioria dos casos, será a aba ou janela atual.
+
+<a href="https://freecodecamp.org" target="_self">Visit freeCodeCamp</a>
+
+    Valor _blank: Isso abre o link em um novo contexto de navegação. Normalmente, isso abrirá em uma nova aba. Mas alguns usuários podem configurar seus navegadores para abrir uma nova janela em vez disso.
+
+<a href="https://freecodecamp.org" target="_blank">Visit freeCodeCamp</a>
+
+    Valor '_parent': Isso abre o link no pai do contexto atual. Por exemplo, se seu site tiver um iframe, um valor '_parent' nesse iframe abriria na aba/janela do seu site, não no frame incorporado.
+
+<a href="https://freecodecamp.org" target="_parent">Visit freeCodeCamp</a>
+
+    Valor _top: Isso abre o link no contexto de navegação mais alto - pense em "o pai do pai". Isso é semelhante a _parent, mas o link sempre será aberto na aba/janela completa do navegador, mesmo para frames embutidos aninhados.
+
+<a href="https://freecodecamp.org" target="_top">Visit freeCodeCamp</a>
+
+Caminhos Absolutos vs. Relativos
+
+    Definição de caminho: Um caminho é uma string que especifica a localização de um arquivo ou diretório em um sistema de arquivos. No desenvolvimento web, caminhos permitem que desenvolvedores vinculem a recursos como imagens, folhas de estilo, scripts e outras páginas web.
+    Sintaxe de Caminho: Existem três sintaxes principais para conhecer. A primeira é a barra, que pode ser uma barra invertida (\) ou barra normal (/) dependendo do seu sistema operacional. A segunda é o ponto único (.). E finalmente, temos o ponto duplo (..). A barra é conhecida como o "separador de caminho". Ela é usada para indicar uma quebra no texto entre nomes de pastas ou arquivos. Um ponto único aponta para o diretório atual e dois pontos apontam para o diretório pai.
+
+public/index.html
+./favicon.ico
+../src/index.css
+
+    Caminho Absoluto: Um caminho absoluto é um link completo para um recurso. Ele começa a partir do diretório raiz, inclui todos os outros diretórios e finalmente o nome do arquivo e a extensão. O "diretório raiz" refere-se ao diretório ou pasta de nível superior em uma hierarquia. Um caminho absoluto também inclui o protocolo - que pode ser http, https e file e o nome do domínio se o recurso estiver na web. Aqui está um exemplo de um caminho absoluto que linka para o logo do freeCodeCamp:
+
+<a href="https://design-style-guide.freecodecamp.org/img/fcc_secondary_small.svg">
+  View fCC Logo
+</a>
+
+    Caminho Relativo: Um caminho relativo especifica a localização de um arquivo em relação ao diretório do arquivo atual. Ele não inclui o protocolo ou o nome do domínio, tornando-o mais curto e mais flexível para links internos dentro do mesmo site. Aqui está um exemplo de como vincular à página about.html a partir da página contact.html, ambas na mesma pasta:
+
+<p>
+  Read more on the
+  <a href="about.html">About Page</a>
+</p>
+
+Estados do link
+
+    :link: Este é o estado padrão. Este estado representa um link que o usuário ainda não visitou, clicou ou interagiu. Você pode pensar neste estado como fornecendo os estilos base para todos os links na sua página. Os outros estados são construídos sobre ele.
+    :visited: Isso se aplica quando um usuário já visitou a página para a qual o link aponta. Por padrão, isso torna o link roxo - mas você pode usar CSS para fornecer uma indicação visual diferente ao usuário.
+    :hover: Este estado se aplica quando um usuário está passando o cursor sobre um link. Este estado é útil para chamar atenção extra para um link, para garantir que o usuário realmente pretende clicar nele.
+    :focus: Este estado se aplica quando focamos em um link.
+    :active: Este estado se aplica a links que estão sendo ativados pelo usuário. Isso normalmente significa clicar no link com o botão principal do mouse ao clicar com o botão esquerdo, na maioria dos casos.
+
